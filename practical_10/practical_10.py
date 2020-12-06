@@ -19,7 +19,6 @@ try:
 except FileNotFoundError:
     student_record = {}
 
-
 def save():
     with open("bin.dat", "wb") as f:
         pickle.dump(student_record, f)
