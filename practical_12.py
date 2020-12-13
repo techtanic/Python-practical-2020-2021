@@ -1,6 +1,5 @@
 import csv
 
-
 try:
     with open("employee.csv", "r", newline="") as csvfile:
         empreader = csv.reader(csvfile)
@@ -8,12 +7,10 @@ try:
 except FileNotFoundError:
     EMPLOYEES = []
 
-
 def save():
     with open("employee.csv", "w", newline="") as csvfile:
         empwriter = csv.writer(csvfile)
         empwriter.writerows(EMPLOYEES)
-
 
 def new_employee():
     emp_no = input("Employee Number: ")
@@ -23,7 +20,6 @@ def new_employee():
 
     EMPLOYEES.append((emp_no, name, salary))
     save()
-
 
 def search_for_employee():
     emp_no = input("Employee Number to Search for: ")
@@ -36,12 +32,10 @@ def search_for_employee():
     else:
         print("Employee Not Found\n")
 
-
 while True:
     print("1: Add New Employee")
     print("2: Search for Employee")
     print("3: Exit\n")
-
     choice = input("Choice: ")
     print()
 
