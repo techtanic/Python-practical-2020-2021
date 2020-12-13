@@ -1,14 +1,14 @@
 import pickle
 
 try:
-    with open("books.dat", "rb") as f:
+    with open("Books.dat", "rb") as f:
         BOOKS = pickle.load(f)
 except FileNotFoundError:
     BOOKS = []
 
 
 def save():
-    with open("books.dat", "wb") as f:
+    with open("Books.dat", "wb") as f:
         pickle.dump(BOOKS, f)   
 
 
