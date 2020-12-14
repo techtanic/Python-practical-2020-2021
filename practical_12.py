@@ -32,13 +32,13 @@ def search_for_employee():
     else:
         print("Employee Not Found\n")
 
-while True:
-    print("1: Add New Employee")
-    print("2: Search for Employee")
-    print("3: Exit\n")
-    choice = input("Choice: ")
-    print()
 
+print("1: Add New Employee")
+print("2: Search for Employee")
+print("3: Exit\n")
+choice = input("Choice: ")
+print()
+while True:
     if choice == "1":
         new_employee()
     elif choice == "2":
