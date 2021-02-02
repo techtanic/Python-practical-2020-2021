@@ -36,9 +36,9 @@ def search_for_employee():
 print("1: Add New Employee")
 print("2: Search for Employee")
 print("3: Exit\n")
-choice = input("Choice: ")
 print()
 while True:
+    choice = input("Choice: ")
     if choice == "1":
         new_employee()
     elif choice == "2":

@@ -14,7 +14,6 @@ for line in lines:
     line = line.split()
     for word in line:
         for char in word:
-
             if char.isalpha():
                 if char in vowels:
                     v += 1
