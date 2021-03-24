@@ -1,7 +1,7 @@
 def bub_sort(l):
     n=len(l)-1
     for i in range(n):
-        for j in range(n):
+        for j in range(n-i):
             if l[j]>l[j+1]:
                 l[j],l[j+1]=l[j+1],l[j]
     print(f"Sorted list: {l}")
@@ -18,7 +18,7 @@ while True:
     ch=int(input("Choice: "))
     if ch==3:
         exit()
-    l=list(map(int,input("Enter the list: ").strip().split()))
+    l=eval(input("Enter the list: "))
     if ch==1:
         bub_sort(l)
     if ch==2:

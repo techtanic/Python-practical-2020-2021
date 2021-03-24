@@ -33,5 +33,3 @@ print("No. of digits =",d)
 print("No. of upper case =",u)
 print("No. of lower case =",l)
 print("No. of special =",s)
-
-        

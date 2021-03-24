@@ -4,6 +4,7 @@ try:
     with open("employee.csv", "r", newline="") as csvfile:
         empreader = csv.reader(csvfile)
         EMPLOYEES = list(empreader)
+        print(EMPLOYEES)
 except FileNotFoundError:
     EMPLOYEES = []
 
@@ -18,7 +19,8 @@ def new_employee():
     salary = input("Salary: ")
     print()
 
-    EMPLOYEES.append((emp_no, name, salary))
+    EMPLOYEES.append([emp_no, name, salary])
+    print(EMPLOYEES)
     save()
 
 def search_for_employee():

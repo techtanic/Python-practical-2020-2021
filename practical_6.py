@@ -8,19 +8,19 @@ def lin_search():
     return print("Element not found.")
 
 def bin_search():
-    l=list(map(eval,input("\nEnter the numbers : ").strip().split()))
+    l=eval(input("\nEnter the numbers : "))
     l.sort()
     print(f"List:{l}")
     x=eval(input("Element to be searched: "))
-    low,high=0,len(l)-1
-    while low<=high:
-        mid=(low+high)//2
-        if l[mid]==x:
+    left,right=0,len(l)-1
+    while left<=right:
+        mid=(left+right)//2
+        if x==l[mid]:
             return print(f"Element found at index: {mid}")
-        if l[mid]>x:
-            high=mid-1
+        if x<l[mid]:
+            right=mid-1
         else:
-            low=mid+1
+            left=mid+1
     return print("Element not found.")
 print("1- Linear search \n2- Binary search")
 print("3- Exit")
